@@ -19,6 +19,8 @@ public class ScoopToppings : MonoBehaviour
     public GameObject confettiPoint;
     public GameObject gameManager1;
 
+    public GameObject restartBtn;
+
     //public Transform charcterAnimated;
     public Animator animChar;
     // Start is called before the first frame update
@@ -104,7 +106,14 @@ public class ScoopToppings : MonoBehaviour
             //animator.runtimeAnimatorController = Resources.Load("Assets/Animations/Idle 2.controller") as RuntimeAnimatorController;
 
             animChar.SetBool("isWaiting", false);
-            cameraFollow.offset += new Vector3(0, 10, -0);
+
+            for (int i = 0; i < stack.stackObjects.Count; i++)
+            {
+                cameraFollow.offset += new Vector3(0, 0.75f, -0.75f);
+            }
+
+            Camera.main.transform.Rotate(-20f, 0, 0, Space.World);
+            StartCoroutine(RestartWait());
         }
 
         IEnumerator chocSauceWait()
@@ -117,6 +126,12 @@ public class ScoopToppings : MonoBehaviour
                 stack.stackObjects[i].transform.GetChild(2).gameObject.transform.Rotate(0, 0, Random.Range(0, 180));
                 origChocSauce.SetActive(true);
             }
+        }
+
+        IEnumerator RestartWait()
+        {
+            yield return new WaitForSeconds(3f);
+            restartBtn.SetActive(true);
         }
     }
 }

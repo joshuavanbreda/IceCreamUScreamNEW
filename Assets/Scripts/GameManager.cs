@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Tabtale.TTPlugins;
 
 public class GameManager : MonoBehaviour
@@ -18,5 +19,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    public void RestartButton()
+    {
+        SceneManager.LoadScene(0);
     }
 }
