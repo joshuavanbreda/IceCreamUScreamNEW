@@ -86,7 +86,13 @@ public class ScoopToppings : MonoBehaviour
             cameraFollow.camTarget.transform.parent = gameManager1.transform;
             Camera.main.transform.parent = gameManager1.transform;
 
-            cameraFollow.offset += new Vector3(5f, 10f, -20f);
+            cameraFollow.camTarget.transform.localPosition = new Vector3(0, 0, 0);
+            cameraFollow.offset = new Vector3(0, 0, 0);
+            Camera.main.transform.localPosition = new Vector3(0, 0, 0);
+            stack.player.transform.Rotate(-70f, 0, 10, Space.World);
+            
+
+            //cameraFollow.offset += new Vector3(5f, 10f, -20f);
 
             // modify Main camera properties :
             Camera.main.nearClipPlane = 0.05f;
@@ -98,6 +104,7 @@ public class ScoopToppings : MonoBehaviour
             //animator.runtimeAnimatorController = Resources.Load("Assets/Animations/Idle 2.controller") as RuntimeAnimatorController;
 
             animChar.SetBool("isWaiting", false);
+            cameraFollow.offset += new Vector3(0, 10, -0);
         }
 
         IEnumerator chocSauceWait()
