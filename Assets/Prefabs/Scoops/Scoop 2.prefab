@@ -7626,7 +7626,6 @@ GameObject:
   - component: {fileID: 8639606957611122094}
   - component: {fileID: 7243622822668708862}
   - component: {fileID: -45794798298871869}
-  - component: {fileID: 7443389966586757956}
   - component: {fileID: 6682363048314041111}
   m_Layer: 0
   m_Name: Scoop 2
@@ -7716,23 +7715,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.7857047
   m_Center: {x: -0.0050283666, y: 0.003615887, z: -0.18}
---- !u!114 &7443389966586757956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4246101513740178112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6757b231cedd544c583ef8aeaf773b2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thickness: 0
-  material: {fileID: 11400000, guid: 06e7bfec7795f448eb8800edc99dbcf2, type: 2}
-  filter: -65534
-  m_SourceCollider: {fileID: -45794798298871869}
-  m_DistanceField: {fileID: 0}
 --- !u!65 &6682363048314041111
 BoxCollider:
   m_ObjectHideFlags: 0
