@@ -17,8 +17,10 @@ public class ScoopToppings : MonoBehaviour
 
     public GameObject confetti;
     public GameObject confettiPoint;
+    public GameObject gameManager1;
 
-    public Transform charcterAnimated;
+    //public Transform charcterAnimated;
+    public Animator animChar;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +82,9 @@ public class ScoopToppings : MonoBehaviour
             playerMovement.initialized = false;
             //Camera.main.transform.position += new Vector3(0, 5f, 0);
             stack.player.transform.parent = iceCreamCarryPoint;
-            stack.player.transform.position = iceCreamCarryPoint.position;
+            stack.player.transform.localPosition = new Vector3(0,0,0);
+            cameraFollow.camTarget.transform.parent = gameManager1.transform;
+            Camera.main.transform.parent = gameManager1.transform;
 
             cameraFollow.offset += new Vector3(5f, 10f, -20f);
 
@@ -92,6 +96,8 @@ public class ScoopToppings : MonoBehaviour
 
             //Animator animator = charcterAnimated.gameObject.GetComponent<Animator>();
             //animator.runtimeAnimatorController = Resources.Load("Assets/Animations/Idle 2.controller") as RuntimeAnimatorController;
+
+            animChar.SetBool("isWaiting", false);
         }
 
         IEnumerator chocSauceWait()
