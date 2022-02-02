@@ -16,7 +16,7 @@ public class CameraFollow : MonoBehaviour
 
     private void Start()
     {
-        offset = new Vector3(0, 9f, -5f);
+        offset = new Vector3(0, 12f, -7f);
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class CameraFollow : MonoBehaviour
 
             //transform.position = smoothedPosition;
             ///////////////////transform.position = new Vector3(smoothedPosition.x, smoothedPosition.y, transform.position.z + (Time.deltaTime * 15));
-            transform.position = new Vector3(smoothedPosition.x, smoothedPosition.y, smoothedPosition.z);
+            transform.position = new Vector3(smoothedPosition.x, smoothedPosition.y, smoothedPosition.z);            
         }
         if (scoopToppings.isEnd == true && camMoved == false)
         {
