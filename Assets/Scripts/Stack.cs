@@ -124,7 +124,7 @@ public class Stack : MonoBehaviour
 
                 //Camera.main.transform.position += new Vector3(0, 1.5f, 0);
                 camDistanceZ += 1.5f;
-                cameraFollow.offset -= new Vector3(0, 0, 1.5f);
+                cameraFollow.offset -= new Vector3(0, 0, 0.65f);
                 //Camera.main.transform.position -= new Vector3(0,0,5);
                 cherryTopping.transform.position += new Vector3(0, 1.5f, 0);
                 cameraFollow.camTarget.transform.position += new Vector3(0, 1.5f, 0);
@@ -146,7 +146,7 @@ public class Stack : MonoBehaviour
 
         //Destroy(cube);
         //stackObjects.RemoveAt(startPoint);
-        cameraFollow.offset += new Vector3(0, 0, 1.5f);
+        cameraFollow.offset += new Vector3(0, 0, 0.65f);
     }
 
 }
