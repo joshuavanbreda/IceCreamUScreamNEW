@@ -100,7 +100,7 @@ public class ScoopToppings : MonoBehaviour
             Camera.main.nearClipPlane = 0.05f;
             Camera.main.farClipPlane = 1500f;
             // Confetti particle
-            //confetti.SetActive(true);
+            confetti.SetActive(true);
 
             //Animator animator = charcterAnimated.gameObject.GetComponent<Animator>();
             //animator.runtimeAnimatorController = Resources.Load("Assets/Animations/Idle 2.controller") as RuntimeAnimatorController;
